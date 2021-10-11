@@ -1,7 +1,7 @@
 import sqlite3
 # from employee import *
 from project.models import employee
-conn = sqlite3.connect("project/database/my_database.db",check_same_thread=False)
+conn = sqlite3.connect("project/models/my_database.db",check_same_thread=False)
 c = conn.cursor()
 # c.execute("INSERT INTO emp(name,phone) VALUES('Danh',12131313)")
 def insertEmp(n:str,p:int):
@@ -24,7 +24,7 @@ def getAllEmp():
     return all_emp
 def commit_all():
     conn.commit()
-    conn.close()
+    # conn.close()
 if __name__ == "__main__":
     all_emp = getAllEmp()
     for e in all_emp:
