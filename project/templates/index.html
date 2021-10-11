@@ -8,6 +8,12 @@
 </head>
 <body>
     <p>Home</p>
-    <p>{{data}}</p>
+    {% for e in data%}
+        <ul>
+            <li>{{e.getId()}}</li>
+            <li>{{e.getName()}}</li>
+            <li>{{e.getPhone()}}</li>
+        </ul>
+    {% endfor%}
 </body>
 </html>
