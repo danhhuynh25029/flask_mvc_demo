@@ -7,13 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Home</p>
-    {% for e in data%}
-        <ul>
-            <li>{{e.getId()}}</li>
-            <li>{{e.getName()}}</li>
-            <li>{{e.getPhone()}}</li>
-        </ul>
+    <a href="/insert">Insert</a>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        {% for e in data%}
+        <tr>
+            <td>{{e.getId()}}</td>
+            <td>{{e.getName()}}</td>
+            <td>{{e.getPhone()}}</td>
+            <td><a href="/delete?id={{e.getId()}}">Delete</a></td>\
+            <td><a href="/update?id={{e.getId()}}">Update</a></td>
+        </tr>
     {% endfor%}
+    </table>
+    
 </body>
 </html>
