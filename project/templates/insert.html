@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
     <title>Document</title>
 </head>
 <body>
     <form action="/insert" method="POST">
-        <label>Name</label><input type="text" name="name" ><br>
-        <label>Phone</label><input type="text" name="phone"><br>
-        <input type="submit" value="submit">
+        <table class="update">
+            <tr>
+                <td colspan="2"><h3>INSERT</h1></td>
+            </tr>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="name" ></td>
+            </tr>
+            <tr>
+                <td><label>Phone</label></td>
+                <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="submit"></td>
+            </tr>
+        </table>
+        
     </form>
 </body>
 </html>

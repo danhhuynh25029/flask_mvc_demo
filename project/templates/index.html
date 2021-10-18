@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
     <title>Document</title>
 </head>
 <body>
     <a href="/insert">Insert</a>
-    <table>
+    <table class="home">
         <tr>
-            <th>id</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Phone</th>
-            <th>Delete</th>
-            <th>Update</th>
+            <th>Action</th>
         </tr>
         {% for e in data%}
         <tr>
             <td>{{e.getId()}}</td>
             <td>{{e.getName()}}</td>
             <td>{{e.getPhone()}}</td>
-            <td><a href="/delete?id={{e.getId()}}">Delete</a></td>\
-            <td><a href="/update?id={{e.getId()}}">Update</a></td>
+            <td><a href="/delete?id={{e.getId()}}" class="de">Delete</a>
+            <a href="/update?id={{e.getId()}}" class="up">Update</a></td>
         </tr>
-    {% endfor%}
+        {% endfor%}
     </table>
     
 </body>

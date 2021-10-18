@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: block;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px 5px;
+    text-decoration: none;
+    background-color:lightgreen;
+}
+.home{
+    width: 100%;
+    text-align: center;
+}
+.home tr{
+    height: 50px;
+    border-bottom: 3px solid black;
+}
+.home tr td{
+    border-bottom: 1px solid black;
+}
+.home tr td a{
+    display: inline-block;
+    margin: auto;
+}
+.home tr td .de{
+    background-color: lightcoral;
+}
+.home tr td .up{
+    background-color: lightskyblue;
+}
+form input{
+    height: 30px;
+    line-height: 30px;
+}
+/* update form */
+.update{
+    text-align: center;
+    margin: 30px auto;
+}
+.update tr td{
+    padding-top: 10px;
+}
+.update tr td input[type=text]{
+    width: 200px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-left:30px;
+    /* margin-top: 10px; */
+    
+}
+.update tr td input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    /* padding: 12px 20px; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70px;
+    float: right;
+    /* float: right; */
+  }
