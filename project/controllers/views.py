@@ -1,15 +1,18 @@
 from project import app
 from flask import render_template,request,redirect
 from project.models import *
-@app.route('/home')
+@app.route('/')
 def home():
+    return render_template('home.html')
+@app.route('/employee')
+def showAll():
     allEmp = databaseConnect.getAllEmp()
     return render_template('index.html',data=allEmp)
 @app.route("/delete")
 def delete():
     id = request.args.get("id")
     databaseConnect.deleteEmp(id)
-    return redirect('/home')
+    return redirect('/employee')
 @app.route("/insert",methods=['POST','GET'])
 def insert():
     if request.method == 'GET':
@@ -18,7 +21,7 @@ def insert():
         name = request.form['name']
         phone = request.form['phone']
         databaseConnect.insertEmp(name, phone)
-        return redirect('/home')
+        return redirect('/employee')
 @app.route("/update",methods=['GET','POST'])
 def update():
     if request.method == 'GET':
@@ -31,4 +34,4 @@ def update():
         name = request.form['name']
         phone = request.form['phone']
         databaseConnect.updateEmp(id, name, phone)
-        return redirect('/home')
+        return redirect('/employee')
